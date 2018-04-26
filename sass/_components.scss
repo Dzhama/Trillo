@@ -129,8 +129,43 @@
 	}
 	
 	&__user {
-
+		position: relative;
+			
+		&:hover  > :last-child {
+			visibility: visible;
+		}
 	}
+
+	&__hidden {
+		position: absolute;
+		top: 7rem;
+		left: -.1rem;
+		background-color: #fff;
+		width: 100%;
+		transition: all .1s;
+		visibility: hidden;
+
+		.user-list {
+			
+			&__item {
+				list-style: none;
+				padding: 1rem 0;
+				padding-left: 2rem;
+				
+				&:hover {
+					background-color: var(--color-grey-light-2);
+				}
+			}
+
+			&__link {
+				text-decoration: none;
+				width: 100%;
+				color: var(--color-grey-dark-2);
+			}
+		}
+	}
+
+
 
 	&__user-photo {
 		height: 3.75rem;
